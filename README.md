@@ -169,7 +169,7 @@ It should be feasible to do this with Karma as well (untested).
 ### Comparison/Overview
 
 Features | BusterJS | Mocha (1) | Karma | Testem |
-:-|:-:|:-:|:-:|:-:
+:--|:-:|:-:|:-:|:-:
 AMD | Y ([2](http://docs.busterjs.org/en/latest/extensions/buster-amd/)) | N ([3](http://metaskills.net/mocha-phantomjs)) | Y (2) | Y
 BDD | Y | Y | Y | Y
 Jasmine | N ([3](https://github.com/mattfysh/jasmine-buster)) | N (2) | Y (2) | Y
@@ -193,7 +193,7 @@ Since Intern doesn't meet the first requirement (AMD w/ either RequireJS or curl
 Running a single test, including opening and closing 4 different browsers is fast in Karma and Testem. Testem has the option to run browsers in parallel, while Karma seems to do this automatically. The (same) test is run using minimal, default settings; Jasmine; and in Chrome, Chrome Canary, Firefox and PhantomJS:
 
 Command | Time (real)
-:- |
+:-- | ---
 `time testem ci -P 4` | 2.8s
 `time karma start --single-run` | 3.8s
 
