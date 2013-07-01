@@ -104,9 +104,13 @@ The project has an explicit "beta" stamp on it. Project activity seems pretty lo
 
 Overall, this doesn't seem the right time to jump on this train (especially if things don't work straight away).
 
+Of course I would love to see [things](https://github.com/webpro/baseplate) working!
+
 ### Intern
 
 Intern is the new kid on the block, and it's quite impressive and complete. However, the Dojo Loader quickly renders applications out of luck if they are using unsupported AMD configuration options (e.g. RequireJS's "shim") and non-AMD modules (e.g. Backbone). There is an AMD-plugin to support non-AMD modules, but that would require a migration to the Dojo Loader and modifying existing modules to use the plugin. Having the test framework dictate such application specific setup is unacceptable. It's TDD one step too far.
+
+Of course I would love to see [things](https://github.com/webpro/baseplate) working!
 
 ### Karma
 
