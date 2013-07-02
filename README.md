@@ -24,6 +24,7 @@ Please feel free to comment e.g. by opening tickets, or comment on this README.
     * Functional Testing
     * Comparison/Overview
     * Performance
+* Functional Testing - Alternative Solutions
 * CommonJS
 
 ## Types of Testing
@@ -198,6 +199,16 @@ Command | Time (real)
 `time karma start --single-run` | 3.8s
 
 Not sure how things stack up on other systems, in other browsers and with more tests.
+
+## Functional Testing - Alternative Solutions
+
+There might be good reasons to separate the unit tests from the functional tests (and break some of the requirements). Especially if more control of the browser itself is needed (e.g. for page navigation). Then solutions like the following might be interesting to check out:
+
+* [CasperJS](http://casperjs.org/) - Functional testing solution on top of CasperJS (i.e. not in real browsers)
+* [Selenium WebDriver](http://docs.seleniumhq.org/projects/webdriver/) - API to automate testing web applications (available in [many languages](http://docs.seleniumhq.org/docs/03_webdriver.jsp), using [various browser drivers](https://code.google.com/p/selenium/wiki/FrequentlyAskedQuestions#Q:_Which_browsers_does_WebDriver_support?))
+* [WD.js](https://github.com/admc/wd) - WebDriver/Selenium 2 for Node ([used by Intern](https://github.com/theintern/intern#features))
+
+Note: The [WebDriver API](http://www.w3.org/TR/webdriver/) is a W3C standard (which in turn is based on Selenium WebDriver).
 
 ## CommonJS
 
