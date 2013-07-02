@@ -109,7 +109,14 @@ Of course I would love to see [things](https://github.com/webpro/baseplate) work
 
 ### Intern
 
-Intern is the new kid on the block, and it's quite impressive and complete. However, the Dojo Loader quickly renders applications out of luck if they are using unsupported AMD configuration options (e.g. RequireJS's "shim") and non-AMD modules (e.g. Backbone). There is an AMD-plugin to support non-AMD modules, but that would require a migration to the Dojo Loader and modifying existing modules to use the plugin. Having the test framework dictate such application specific setup is unacceptable. It's TDD one step too far.
+Intern is the new kid on the block, and it's quite impressive and complete.
+
+However, there's a catch for the AMD loader. In short, I think the options are:
+
+* Use (or switch to) the Dojo Loader in the application. If you are used to require.js and need "shim" configuration you have to migrate to a plugin for non-AMD scripts (curl.js does this as well, but not sure if it's compatible).
+* Provided [this issue](https://github.com/theintern/intern/issues/38) is fixed, use require.js in the Intern [clients](https://github.com/theintern/intern/wiki/Running-Tests) for the browser and Node. Things get complicated quickly when configuring both browser and Node environments. The browser environment can be set up using require.js ([demo](https://github.com/webpro/baseplate/tree/master/test/intern)); unfortunately didn't get it to work for Node and thus missing out on all the interesting features (code coverage reporting, multi-platform testing, CI).
+
+Either way, having the test framework dictate such application specific setup is unacceptable. It's TDD one step too far. Hopefully things will work out in a next version.
 
 Of course I would love to see [things](https://github.com/webpro/baseplate) working!
 
