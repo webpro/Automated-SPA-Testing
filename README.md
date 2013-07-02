@@ -10,22 +10,22 @@ Please feel free to comment e.g. by opening tickets, or comment on this README.
 
 ## Contents
 
-* Types of Testing
-* Requirements
-* Test Frameworks
-* Assertion Libraries
-* Test Doubles
-* Test Runners
-    * BusterJS
-    * Intern
-    * Mocha
-    * Karma
-    * Testem
-    * Functional Testing
-    * Comparison/Overview
-    * Performance
-* Functional Testing - Alternative Solutions
-* CommonJS
+* [Types of Testing](#types-of-testing)
+* [Requirements](#requirements)
+* [Test Frameworks](#test-frameworks)
+* [Assertion Libraries](#assertion-libraries)
+* [Test Doubles](#test-doubles)
+* [Test Runners](#test-runners)
+    * [BusterJS](#busterjs)
+    * [Intern](#intern)
+    * [Mocha](#mocha)
+    * [Karma](#karma)
+    * [Testem](#testem)
+    * [Functional Testing](#functional-testing)
+    * [Comparison Table](#comparison-table)
+    * [Performance](#performance)
+* [Functional Testing - Alternative Solutions](#functional-testing---alternative-solutions)
+* [CommonJS](#commonjs)
 
 ## Types of Testing
 
@@ -167,7 +167,7 @@ It's actually trivial to set this up using Testem, Jasmine, jQuery, and [jasmine
 
 It should be feasible to do this with Karma as well (untested).
 
-### Comparison/Overview
+### Comparison Table
 
 Features | BusterJS | Mocha (1) | Karma | Testem |
 :--|:-:|:-:|:-:|:-:
