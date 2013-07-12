@@ -70,6 +70,8 @@ Assertion libraries provide the interface to make "assertions" (in TDD). They're
 
 Mocha leaves this open, and Jasmine ships with Matchers (`expect()` style methods). All libraries can be extended with custom assertions/matchers.
 
+Note that Chai is a more popular choice and has more features, but does not support oldIE (while expect.js supports IE6+).
+
 ## Test Doubles
 
 Since unit testing means testing isolated and dependency-free units, dependencies need to be mocked or stubbed out (i.e. "test doubles"). For instance, method calls to modules the unit depends on, and XHR calls to services.
