@@ -172,7 +172,7 @@ There are a couple of caveats when programmatically simulating user interactions
 * Filling out an input field (e.g. `$('input[name=firstName]').val('John')`) won't trigger a "change" event. This can be simulated by appending `.trigger('change')`, or use something like [jQuery.autotype](https://github.com/mmonteleone/jquery.autotype) (untested).
 * Simulating touch events is possible by dispatching [Touch Events](http://www.w3.org/TR/touch-events/), or use something like [fake-touches](https://github.com/jtangelder/faketouches.js) (untested).
 
-It's actually trivial to set this up using Testem, Jasmine, jQuery, and [jasmine-jquery](https://github.com/velesin/jasmine-jquery). Driven by Testem, the functional tests can easily be ran cross-browser and/or quickly using only PhantomJS. Here is [a working example](https://github.com/webpro/baseplate/tree/master/test/behavior).
+It's actually trivial to set this up using Testem, Jasmine (or Mocha), jQuery, and [jasmine-jquery](https://github.com/velesin/jasmine-jquery). Driven by Testem, the functional tests can easily be ran cross-browser and/or quickly using only PhantomJS. Here is [how it might look like](https://github.com/webpro/baseplate/blob/master/test/mocha-behavior/specs/moduleB.behavior.js) in a working example.
 
 It should be feasible to do this with Karma as well (untested).
 
