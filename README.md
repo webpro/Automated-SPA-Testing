@@ -36,7 +36,7 @@ Some definitions of test type used here:
 * **Integration Testing**: combine functions and involve real dependencies (CMS, database, etc.).
 * **Acceptance Testing**: validate correct behavior of the product by the customer.
 
-This document only focuses on unit and functional testing for client-side single-page applications (SPA), leaving integration and acceptance testing are out of scope.
+This document only focuses on unit and functional testing for client-side single-page applications (SPA), leaving integration and acceptance testing out of scope.
 
 ## Requirements
 
