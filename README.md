@@ -164,7 +164,7 @@ There are a couple of caveats when programmatically simulating user interactions
 * Filling out an input field (e.g. `$('input[name=firstName]').val('John')`) won't trigger a "change" event. This can be simulated by appending `.trigger('change')`, or use something like [jQuery.autotype](https://github.com/mmonteleone/jquery.autotype) (untested).
 * Simulating touch events is possible by dispatching [Touch Events](http://www.w3.org/TR/touch-events/), or use something like [fake-touches](https://github.com/jtangelder/faketouches.js) (untested).
 
-It's actually trivial to set this up using Testem, Jasmine (or Mocha), jQuery, and [jasmine-jquery](https://github.com/velesin/jasmine-jquery). Driven by Testem, the functional tests can easily be ran cross-browser and/or quickly using only PhantomJS. Here is [how it might look like](https://github.com/webpro/baseplate/blob/master/test/mocha-behavior/specs/moduleB.behavior.js) in a working example.
+It's actually trivial to set this up using Testem, Jasmine (or Mocha) and jQuery. Driven by Testem, the functional tests can easily be ran cross-browser and/or quickly using only PhantomJS. Here is [how it might look like](https://github.com/webpro/baseplate/blob/master/test/mocha-behavior/specs/moduleB.behavior.js) in a working example.
 
 It should be feasible to do this with Karma as well (untested).
 
@@ -190,7 +190,7 @@ Since Intern doesn't meet the first requirement (AMD w/ either RequireJS or curl
 1. Feature available through external project.
 1. Mocha _uses_ Node, but not suited for AMD setup.
 
-#### Performance
+### Performance
 
 Running a single test, including opening and closing 4 different browsers is fast in Karma and Testem. Testem has the option to run browsers in parallel, while Karma seems to do this automatically. The (same) test is run using minimal, default settings; Jasmine; and in Chrome, Chrome Canary, Firefox and PhantomJS:
 
