@@ -98,9 +98,7 @@ Buster is a great effort and looks very interesting.
 
 Configuration requires to load all files that _might_ be needed. E.g. `sources: ["src/**/*.js", "lib/**/*.js"]`. This might include a lot of unnecessary files (libraries may come with a large number of files that are not needed to use it), so it's not great performance wise. But the actual issue is that some matching `.js` files are Node executables, and thus start with a hash-bang (i.e. `#!/usr/bin/env node`), causing a fatal error for Buster (`[Fatal] Syntax error`).
 
-Even after removing the problematic Node executables manually, there was another fatal error: `Failed creating session: EISDIR, read` (since also directories could match `*.js`, but handled as a file).
-
-Filed [issue #362](https://github.com/busterjs/buster/issues/362) and updated [issue #256](https://github.com/busterjs/buster/issues/256).
+Filed [issue #362](https://github.com/busterjs/buster/issues/362).
 
 #### Project Activity
 
@@ -114,14 +112,7 @@ Of course I would love to see [things](https://github.com/webpro/baseplate) work
 
 Intern is the new kid on the block, and it's quite impressive and complete.
 
-However, there's a catch for the AMD loader. In short, I think the options are:
-
-* Use (or switch to) the Dojo Loader in the application. If you are used to require.js and need "shim" configuration you have to migrate to a plugin for non-AMD scripts (curl.js does this as well, but not sure if it's compatible).
-* Alternativily, use require.js in the Intern [client](https://github.com/theintern/intern/wiki/Running-Tests) for the browser. Things get complicated quickly when configuring both browser and Node environments. The browser environment can be set up using require.js ([demo](https://github.com/webpro/baseplate/tree/master/test/intern)); unfortunately I didn't get it to work for Node and thus missing out on all the interesting features (code coverage reporting, multi-platform testing, CI).
-
-Either way, having the test framework dictate such application specific setup is unacceptable. It's TDD one step too far. Hopefully things will work out in a next version.
-
-Of course I would love to see [things](https://github.com/webpro/baseplate) working!
+There are a couple of issues to be resolved around using alternative AMD loaders (than the default Dojo loader), but many features come out of the box or are in the works, including Sauce Labs and Travis CI integration, functional testing (WebDriver API), and various code coverage reporters (istanbul).
 
 ### Karma
 
