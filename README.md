@@ -170,25 +170,25 @@ It should be feasible to do this with Karma as well (untested).
 
 ### Comparison Table
 
-Features | BusterJS | Mocha (1) | Karma | Testem |
-:--|:-:|:-:|:-:|:-:
-AMD | Y ([2](http://docs.busterjs.org/en/latest/extensions/buster-amd/)) | N ([3](http://metaskills.net/mocha-phantomjs)) | Y (2) | Y
-BDD | Y | Y | Y | Y
-Jasmine | N ([3](https://github.com/mattfysh/jasmine-buster)) | N (2) | Y (2) | Y
-Mocha | N | Y | Y (2) | Y
-CLI: Node | Y | N (4)
-CLI: PhantomJS | Y | N ([3](http://metaskills.net/mocha-phantomjs)) | Y | Y
-CLI: Run tests in real browser | Y | N | Y | Y
-CLI: Open/close browser | N | N | Y | Y
-Code coverage | | | Y | N
-Functional Tests | | | ? | Y
+Features | BusterJS | Intern | Mocha (1) | Karma | Testem |
+:--|:-:|:-:|:-:|:-:|:-:
+AMD | Y ([2](http://docs.busterjs.org/en/latest/extensions/buster-amd/)) | Y | N ([3](http://metaskills.net/mocha-phantomjs)) | Y (2) | Y
+BDD | Y | Y | Y | Y | Y
+Jasmine | N ([3](https://github.com/mattfysh/jasmine-buster)) | N | N (2) | Y (2) | Y
+Mocha | N | N | Y | Y (2) | Y
+CLI: Node | Y | Y | N (4)
+CLI: PhantomJS | Y | Y ([2](https://github.com/theintern/intern/wiki/Using-Intern-with-PhantomJS)) | N ([3](http://metaskills.net/mocha-phantomjs)) | Y | Y
+CLI: Run tests in real browser | Y | Y | N | Y | Y
+CLI: Open/close browser | N | Y (5) | N | Y | Y
+Code coverage | | Y | | Y | N
+Behavior Tests | Y | N | | Y | Y
+Functional Tests | N | Y | | N | N
 
-Since Intern doesn't meet the first requirement (AMD w/ either RequireJS or curl.js), it's not extensively tested and thus not included in this comparison table.
-
-1. This is the Mocha test runner (Mocha client test framework in left column)
+1. This is the Mocha test runner (Mocha client test framework is a feature)
 1. Feature included (e.g. as extension/adapter), but may require extra configuration.
 1. Feature available through external project.
 1. Mocha _uses_ Node, but not suited for AMD setup.
+1. Through Sauce Labs integration (not local).
 
 ### Performance
 
