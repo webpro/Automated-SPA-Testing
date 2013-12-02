@@ -32,11 +32,12 @@ Please feel free to comment e.g. by opening tickets, or comment on this README.
 Some definitions of test type used here:
 
 * **Unit Testing**: validate correctness of isolated units of the application.
-* **Functional Testing**: verify correct behavior of isolated functions based on user interaction.
+* **Behavior Testing**: verify correct behavior of isolated functions based on user interaction, while faking events etc. in JavaScript.
+* **Functional Testing**: verify correct behavior of functions, while the browser itself is driven by the tests (think Selenium, WebDriver API).
 * **Integration Testing**: combine functions and involve real dependencies (CMS, database, etc.).
 * **Acceptance Testing**: validate correct behavior of the product by the customer.
 
-This document only focuses on unit and functional testing for client-side single-page applications (SPA), leaving integration and acceptance testing out of scope.
+This document focuses on unit and behavior testing for client-side single-page applications (SPA), leaving functional, integration and acceptance testing out of scope.
 
 ## Requirements
 
@@ -152,11 +153,11 @@ In short, if Jasmine or Mocha runs, Testem runs.
 
 Additionally, a big plus of this strategy is that it's easy to configure functional testing (see below).
 
-A downside of testem is that it doesn't have support for code coverage (at least not built-in). Since testem hooks into the client side frameworks, those can be configured to use coverage reporters (but after generating coverage files from sources). One working effort includes [Testem Coverage Sandbox](https://github.com/richardbutler/testem-coverage-sandbox).
+A downside of Testem is that it doesn't have support for code coverage (at least not built-in). Since Testem hooks into the client side frameworks, those can be configured to use coverage reporters (but after generating coverage files from sources). One working effort includes [Testem Coverage Sandbox](https://github.com/richardbutler/testem-coverage-sandbox).
 
-### Functional Testing
+### Behavior Testing
 
-Based on the given definition ("verify correct behavior of isolated functions based on user interaction"), the challenge is to initialize a function of the application, and then simulate user interaction with it. Examples include:
+Based on the given definition ("verify correct behavior of isolated functions based on user interaction, while faking events etc. in JavaScript"), the challenge is to initialize a function of the application, and then simulate user interaction with it. Examples include:
 
 * Navigate the UI by clicking links or buttons, and display associated content.
 * Fill out a form and submit it by using the keyboard.
@@ -209,9 +210,9 @@ Command | Time (real)
 
 Not sure how things stack up on other systems, in other browsers and with more tests.
 
-## Functional Testing - Alternative Solutions
+## Functional Testing
 
-There might be good reasons to separate the unit tests from the functional tests (and break some of the requirements). Especially if more control of the browser itself is needed (e.g. for page navigation). Then solutions like the following might be interesting to check out:
+For functional testing, when the browser itself needs to be driven by the tests (e.g. for page navigation, file uploads), solutions like the following might be interesting to check out:
 
 * [CasperJS](http://casperjs.org/) - Functional testing solution on top of CasperJS (i.e. not in real browsers)
 * [Selenium WebDriver](http://docs.seleniumhq.org/projects/webdriver/) - API to automate testing web applications (available in [many languages](http://docs.seleniumhq.org/docs/03_webdriver.jsp), using [various browser drivers](https://code.google.com/p/selenium/wiki/FrequentlyAskedQuestions#Q:_Which_browsers_does_WebDriver_support?))
