@@ -110,9 +110,7 @@ Of course I would love to see [things](https://github.com/webpro/baseplate) work
 
 ### Intern
 
-Intern is the new kid on the block, and it's quite impressive and complete.
-
-There are a couple of issues to be resolved around using alternative AMD loaders (than the default Dojo loader), but many features come out of the box or are in the works, including Sauce Labs and Travis CI integration, functional testing (WebDriver API), and various code coverage reporters (istanbul).
+Intern is the new kid on the block, and it's quite impressive and complete. Many features come out of the box or are in the works, including Sauce Labs and Travis CI integration, functional testing (WebDriver API), and various code coverage reporters (istanbul).
 
 ### Karma
 
