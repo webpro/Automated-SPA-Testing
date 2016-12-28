@@ -58,7 +58,7 @@ This document focuses on unit and behavior testing for client-side single-page a
 Test frameworks provide the interface to write tests, run the tests, and report results.
 
 * [Jasmine](http://pivotal.github.io/jasmine)
-* [Mocha](http://visionmedia.github.io/mocha)
+* [Mocha](http://mochajs.org/)
 
 These frameworks support BDD style tests.
 
@@ -87,7 +87,7 @@ Test runners drive the test frameworks. Currently, popular solutions include:
 * [BusterJS](http://busterjs.org)
 * [Intern](http://theintern.io)
 * [Karma](http://karma-runner.github.io)
-* [Mocha](http://visionmedia.github.io/mocha)
+* [Mocha](http://mochajs.org/)
 * [Testem](https://github.com/airportyh/testem)
 
 ### BusterJS
@@ -124,7 +124,7 @@ For code coverage, istanbul is included (they pair up great). This is [easy to c
 
 Mocha is a test runner built with Node. It can run tests from CLI, but does not steer browsers.
 
-However, it could still complement a setup where Mocha is the client test framework, and the test runner doesn't support running tests in Node. It _could_ be complementary, _if_ the Mocha test runner would support AMD. And this _could_ be solved by using PhantomJS, if Mocha didn't have [this issue](https://github.com/visionmedia/mocha/issues/770) since v1.10. However, things work using [mocha-phantomjs](http://metaskills.net/mocha-phantomjs/) and Mocha v1.9.
+However, it could still complement a setup where Mocha is the client test framework, and the test runner doesn't support running tests in Node. It _could_ be complementary, _if_ the Mocha test runner would support AMD. And this _could_ be solved by using PhantomJS, if Mocha didn't have [this issue](https://github.com/mochajs/mocha/issues/770) since v1.10. However, things work using [mocha-phantomjs](http://metaskills.net/mocha-phantomjs/) and Mocha v1.9.
 
 Mocha supports code coverage output out of the box. It can also be configured to work with:
 
