@@ -1,3 +1,5 @@
+**WARNING:** this repository and the information is outdated. The research was done in July of 2013. This repository is no longer maintained.
+
 # Automated SPA Testing
 
 ## Introduction
